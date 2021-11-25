@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tfi_parcial_tfi_parcial,tfi_parcial.tfi_parcial,model_tfi_parcial_tfi_parcial,base.group_user,1,1,1,1
