@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_tfi_parcial_tfi_parcial,tfi_parcial.tfi_parcial,model_tfi_parcial_tfi_parcial,base.group_user,1,1,1,1
+access_gestion_operaciones_public,gestion.operaciones,model_gestion_operaciones,,1,1,1,1
+acces_gestion_operaciones_clientes_public,gestion.operaciones.clientes,model_gestion_operaciones_clientes,,1,1,1,1
+acces_gestion_operaciones_negocios_public,gestion.operaciones.negocios,model_gestion_operaciones_negocios,,1,1,1,1

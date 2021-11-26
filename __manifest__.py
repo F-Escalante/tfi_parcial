@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "tfi_parcial",
+    'name': "gestion_operaciones",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -24,12 +24,17 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/groups.xml',
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/operaciones.xml',
+        #'views/res_config_settings_views.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
+    'instalable': True,
+    'application': True
 }

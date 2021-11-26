@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='operaciones_action' model='ir.actions.act_window'>
+        <field name="name">Operaciones</field>
+        <field name="res_model">gestion.operaciones</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Gestión Operaciones" id="gestion_operaciones_menu" />
+    <menuitem name="Operaciones" id="operaciones_menu" parent="gestion_operaciones_menu" action="operaciones_action"/>
+
+    <!-- Form View -->
+    <record id="operaciones_view_form" model="ir.ui.view">
+        <field name="name">Operaciones Form</field>
+        <field name="model">gestion.operaciones</field>
+        <field name="arch" type="xml">
+            <form>
+
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="cliente_id"/>
+                            <field name="importe"/>
+                        </group>
+                        <group>
+                            <field name="tipo_operacion"/>
+                            <field name="active"/>
+                            <field name="negocio_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree(list) View -->
+    <record id="operaciones_view_tree" model="ir.ui.view">
+        <field name="name">Gestión de Operaciones</field>
+        <field name="model">gestion.operaciones</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="importe"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="library_book_view_search" model="ir.ui.view">
+        <field name="name">Búsqueda de Operaciones</field>
+        <field name="model">gestion.operaciones</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="tipo_operacion"/>
+
+            </search>
+        </field>
+    </record>
+
+</odoo>

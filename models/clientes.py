@@ -3,13 +3,14 @@ from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 
 
-class BookCategory(models.Model):
+class clientes(models.Model):
     _name = 'gestion.operaciones.clientes'
 
     _parent_store = True
     _parent_name = "parent_id"  # optional if field is 'parent_id'
 
     name = fields.Char('Cliente')
+    fecha_nacimiento = fields.Date('Release Date')
     parent_id = fields.Many2one(
         'gestion.operaciones.clientes',
         string='Parent Category',
