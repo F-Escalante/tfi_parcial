@@ -29,6 +29,8 @@
         'views/views.xml',
         'views/templates.xml',
         'views/operaciones.xml',
+        'views/grafico.xml',
+        'views/tabla.xml'
         #'views/res_config_settings_views.xml'
     ],
     # only loaded in demonstration mode

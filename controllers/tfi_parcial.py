@@ -1,21 +1,29 @@
-# -*- coding: utf-8 -*-
-# from odoo import http
+from odoo import http
+from odoo.http import request
 
 
-# class TfiParcial(http.Controller):
-#     @http.route('/tfi_parcial/tfi_parcial/', auth='public')
-#     def index(self, **kw):
-#         return "Hello, world"
+class tfi_parcial(http.Controller):
+    @http.route('/operaciones/<int:tipo>',auth='public',website=True)
+    def control(self,tipo):
 
-#     @http.route('/tfi_parcial/tfi_parcial/objects/', auth='public')
-#     def list(self, **kw):
-#         return http.request.render('tfi_parcial.listing', {
-#             'root': '/tfi_parcial/tfi_parcial',
-#             'objects': http.request.env['tfi_parcial.tfi_parcial'].search([]),
-#         })
+        r = request.uid
+        print("id usuario ", r)
 
-#     @http.route('/tfi_parcial/tfi_parcial/objects/<model("tfi_parcial.tfi_parcial"):obj>/', auth='public')
-#     def object(self, obj, **kw):
-#         return http.request.render('tfi_parcial.object', {
-#             'object': obj
-#         })
+        dataset =  [
+              ['titulo1',10],
+              ['titulo2', 20],
+              ['titulo3', 30]
+              ]
+
+        jdato = {
+
+            "dato":dataset
+
+        }
+
+        if tipo==1:
+            return request.render("gestion_operaciones.id_vista_tabla",jdato)
+        elif tipo==2:
+            return request.render("gestion_operaciones.id_vista_grafico",jdato)
+        else:
+            return str(dataset)

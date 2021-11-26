@@ -1,0 +1,10 @@
+<odoo>
+
+    <template id="id_vista_grafico">
+
+        <h1> Hola estoy en vista gráfico </h1>
+
+    </template>
+
+
+</odoo>

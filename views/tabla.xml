@@ -1,0 +1,47 @@
+<odoo>
+
+       <template id="assets_frontend" inherit_id="website.assets_frontend" name="Custom Model">
+            <xpath expr="." position="inside">
+            </xpath>
+          </template>
+
+
+
+
+    <template id="id_vista_tabla">
+
+
+        <t t-call='website.layout'>
+
+
+        <h1> Hola estoy en vista tabla </h1>
+
+        <!-- <span t-esc="dato"></span> -->
+
+
+        <table>
+
+            <header>
+                <th> Operación </th>
+                <th> Importe </th>
+            </header>
+
+        <t t-foreach="dato" t-as="d">
+            <tr>
+                <td> <span t-esc="d[0]"></span> </td>
+                <td> <span t-esc="d[1]"></span> </td>
+
+            </tr>
+
+        </t>
+
+
+        </table>
+
+
+        </t>
+
+    </template>
+
+
+</odoo>
